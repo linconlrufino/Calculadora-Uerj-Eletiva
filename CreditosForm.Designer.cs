@@ -51,7 +51,6 @@
             label2.Size = new Size(102, 15);
             label2.TabIndex = 1;
             label2.Text = "LINCONL RUFINO";
-            label2.Click += label2_Click;
             // 
             // linkLabel1
             // 
@@ -67,7 +66,7 @@
             // linkLabel2
             // 
             linkLabel2.AutoSize = true;
-            linkLabel2.Location = new Point(225, 191);
+            linkLabel2.Location = new Point(221, 191);
             linkLabel2.Name = "linkLabel2";
             linkLabel2.Size = new Size(52, 15);
             linkLabel2.TabIndex = 3;
