@@ -367,6 +367,7 @@
             button18.Text = "π";
             button18.TextAlign = ContentAlignment.BottomCenter;
             button18.UseVisualStyleBackColor = true;
+            button18.Click += bPi_Click;
             // 
             // button19
             // 

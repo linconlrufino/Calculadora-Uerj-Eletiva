@@ -108,8 +108,6 @@ namespace CalculadoraBase
                 {
                     v1 = Double.Parse(display.Text);
                     display.Text = "";
-                    //virgula = false;
-                    //v2 = Double.Parse(display.Text);
                     resp = Math.Sqrt(v1);
                     display.Text = resp.ToString();
                     if ((int)resp < resp)
@@ -260,6 +258,27 @@ namespace CalculadoraBase
             }
         }
 
+        private void bPi_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                resp = Math.PI;
+                display.Text = resp.ToString();
+                if ((int)resp < resp)
+                {
+                    virgula = true;
+                }
+                else
+                {
+                    virgula = false;
+                }
+            }
+            catch (System.FormatException exp)
+            {
+                MessageBox.Show("Erro no formato do número!");
+            }
+        }
+
         private void bigual_Click(object sender, EventArgs e)
         {
             if (operacao == 1)
@@ -353,49 +372,41 @@ namespace CalculadoraBase
         private void button3_Click(object sender, EventArgs e)
         {
             display.Text = display.Text + "3";
-
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             display.Text = display.Text + "4";
-
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             display.Text = display.Text + "5";
-
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             display.Text = display.Text + "6";
-
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             display.Text = display.Text + "7";
-
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             display.Text = display.Text + "8";
-
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             display.Text = display.Text + "9";
-
         }
 
         private void button0_Click(object sender, EventArgs e)
         {
             display.Text = display.Text + "0";
-
         }
         #endregion
 
@@ -409,5 +420,6 @@ namespace CalculadoraBase
             CreditosForm creditos = new CreditosForm();
             creditos.ShowDialog();
         }
+
     }
 }
